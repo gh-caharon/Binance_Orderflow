@@ -912,13 +912,13 @@ class CombinedGUI(tk.Tk):
         self.start_stop_btn = tk.Button(
             row1, text="Start Collection",
             command=self.toggle_collection,
-            width=15, font=("Arial", 12)
+            width=15, font=("Arial", 10)
         )
         self.start_stop_btn.pack(side="left", padx=5)
 
         self.status_label = tk.Label(
             row1, text="Status: Stopped",
-            font=("Arial", 12, "bold"), fg="#AA0000"
+            font=("Arial", 10, "bold"), fg="#AA0000"
         )
         self.status_label.pack(side="left", padx=5)
 
@@ -930,24 +930,24 @@ class CombinedGUI(tk.Tk):
         self.snapshot_var = tk.StringVar(value="10.0") # snapshot default
         tk.Label(
             row2, text="Snapshot Interval (sec):",
-            font=("Arial", 12)
+            font=("Arial", 10)
         ).pack(side="left", padx=(0,5))
 
         self.snapshot_entry = tk.Entry(
             row2, textvariable=self.snapshot_var,
-            width=5, font=("Arial", 12)
+            width=5, font=("Arial", 10)
         )
         self.snapshot_entry.pack(side="left", padx=(0,15))
 
         self.rolling_window_var = tk.StringVar(value="6") # rolling window default
         tk.Label(
             row2, text="Rolling Window (# snapshots):",
-            font=("Arial", 12)
+            font=("Arial", 10)
         ).pack(side="left", padx=(0,5))
 
         self.rolling_window_entry = tk.Entry(
             row2, textvariable=self.rolling_window_var,
-            width=5, font=("Arial", 12)
+            width=5, font=("Arial", 10)
         )
         self.rolling_window_entry.pack(side="left")
 
@@ -957,7 +957,7 @@ class CombinedGUI(tk.Tk):
 
         self.price_label = tk.Label(
             row3, text="Last Price: --",
-            font=("Arial", 12)
+            font=("Arial", 10)
         )
         self.price_label.pack(side="left")
         
@@ -1234,7 +1234,7 @@ class CombinedGUI(tk.Tk):
         frame_main.pack(fill="both", expand=True, padx=10, pady=0, ipady=0)
         self.asks_frame = tk.Frame(frame_main, borderwidth=0, highlightthickness=0)
         self.asks_frame.pack(side="top", fill="x", pady=0, ipady=0)
-        self.mid_price_label = tk.Label(frame_main, text="Mid Price: N/A", font=("Arial", 12, "bold"), anchor="w", borderwidth=0, highlightthickness=0, padx=0, pady=0)
+        self.mid_price_label = tk.Label(frame_main, text="Mid Price: N/A", font=("Arial", 10, "bold"), anchor="w", borderwidth=0, highlightthickness=0, padx=0, pady=0)
         self.mid_price_label.pack(side="top", fill="x", pady=1, ipady=0)
         self.bids_frame = tk.Frame(frame_main, borderwidth=0, highlightthickness=0)
         self.bids_frame.pack(side="top", fill="x", pady=0, ipady=0)
@@ -1250,7 +1250,7 @@ class CombinedGUI(tk.Tk):
             self.bid_labels.append(lbl)
 
     def create_trades_widgets(self, parent):
-        self.trades_stats_label = tk.Label(parent, text="Trades Stats: Loading...", font=("Arial", 12))
+        self.trades_stats_label = tk.Label(parent, text="Trades Stats: Loading...", font=("Arial", 10))
         self.trades_stats_label.pack(pady=5)
         columns = ("bar_time", "close_price", "total_volume", "buy_volume", "sell_volume")
 
